@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Learnova — İngilizce Gramer Öğrenme Uygulaması</title>
-  <meta name="description" content="12 kategoride 64+ konu, 550+ örnek cümle ve 1200+ quiz sorusu ile İngilizce dilbilgisini öğrenin." />
+  <meta name="description" content="13 kategoride 68 konu, 590+ örnek cümle ile İngilizce dilbilgisini öğrenin. Çalışma takvimi, quizler ve detaylı konu anlatımları." />
   <meta name="theme-color" content="#F97316" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -238,7 +238,7 @@
       content: "";
       position: absolute;
       inset: 10% -10% 10% -10%;
-      background: radial-gradient(60% 50% at 50% 50%, rgba(249,115,22,0.15), transparent 70%);
+      background: radial-gradient(60% 50% at 50% 50%, rgba(249,115,22,0.12), transparent 70%);
       filter: blur(20px);
       z-index: 0;
     }
@@ -260,17 +260,12 @@
       background: var(--surface);
       aspect-ratio: 9 / 19.5;
     }
-    .phone-screen .placeholder {
+    .phone-screen img {
       width: 100%;
       height: 100%;
-      background: linear-gradient(145deg, #1a1a2e, #2d2d44);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      color: rgba(255,255,255,0.3);
-      font-size: 12px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
     }
 
     .float-card {
@@ -583,6 +578,50 @@
       .testimonial-grid { grid-template-columns: 1fr; gap: 16px; }
     }
 
+    .showcase {
+      background: var(--ink);
+      padding: 100px 0;
+      position: relative;
+      z-index: 2;
+    }
+    .showcase .eyebrow { color: var(--primary-light); }
+    .showcase h2 { color: white; }
+    .showcase .lead { color: rgba(255,255,255,0.6); }
+    .showcase-row {
+      margin-top: 64px;
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      padding: 20px 0 40px;
+      scroll-snap-type: x mandatory;
+    }
+    .showcase-row::-webkit-scrollbar { display: none; }
+    .showcase-card {
+      flex: 0 0 220px;
+      scroll-snap-align: start;
+      border-radius: 36px;
+      padding: 8px;
+      background: linear-gradient(160deg, #2a2a2e, #1c1c1e);
+      box-shadow: 0 40px 80px -30px rgba(0,0,0,0.5);
+    }
+    .showcase-card .phone-screen { border-radius: 30px; aspect-ratio: 9 / 19.5; }
+    .showcase-card .phone-screen img { object-fit: cover; }
+    .showcase-tag {
+      margin-top: 16px;
+      display: flex; flex-direction: column;
+      padding: 0 8px;
+    }
+    .showcase-tag small {
+      font-size: 11px;
+      color: var(--primary-light);
+      letter-spacing: 0.1em;
+    }
+    .showcase-tag strong {
+      font-size: 16px;
+      color: white;
+      margin-top: 4px;
+    }
+
     .cta {
       background: var(--ink);
       padding: 100px 0;
@@ -642,7 +681,7 @@
       color: var(--muted-2);
     }
     @media (max-width: 720px) {
-      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
       .footer-brand { grid-column: 1 / -1; }
       .footer-base { flex-direction: column; gap: 12px; text-align: center; }
     }
@@ -684,6 +723,7 @@
       <nav class="nav-links">
         <a href="#kategoriler">Konular</a>
         <a href="#nasil">Nasıl Çalışır</a>
+        <a href="#vitrin">Ekranlar</a>
         <a href="#yorumlar">Yorumlar</a>
       </nav>
       <div class="hero-actions" style="margin:0;">
@@ -704,7 +744,7 @@
             Dilbilgisini <span class="italic ink-orange">hızla</span> kavrayın.
           </h1>
           <p class="lead reveal delay-2">
-            13 kategoride 68+ konu, 590+ örnek cümle ve 1200+ quiz sorusu. Temelden ileri seviyeye yapılandırılmış derslerle İngilizce dilbilgisini kalıcı olarak öğrenin.
+            13 kategoride 68 konu, 590+ örnek cümle ve interaktif quizlerle İngilizce dilbilgisini kalıcı olarak öğrenin. Çalışma takviminizle ilerlemenizi takip edin.
           </p>
           <div class="hero-actions reveal delay-3">
             <a href="https://play.google.com/store/apps/details?id=com.spinel.learnova" target="_blank" class="btn btn-primary">
@@ -725,16 +765,13 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
             </div>
             <div class="fc-text">
-              <small>Başarı Oranı</small>
-              <strong>%87</strong>
+              <small>Toplam Çalışma</small>
+              <strong>12 gün</strong>
             </div>
           </div>
           <div class="phone">
             <div class="phone-screen">
-              <div class="placeholder">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M8 2v20M16 2v20"/></svg>
-                <span>Ekran Görseli</span>
-              </div>
+              <img src="images/categories.png" alt="Learnova Kategoriler" onerror="this.src='https://placehold.co/300x650/FEF3E8/F97316?text=Kategoriler'"/>
             </div>
           </div>
           <div class="float-card fc-2">
@@ -742,8 +779,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.5 2L4 14h7l-1 8 9.5-12h-7l1-8z"/></svg>
             </div>
             <div class="fc-text">
-              <small>Günlük Hedef</small>
-              <strong>3/5 konu</strong>
+              <small>Gün Serisi</small>
+              <strong>2 gün</strong>
             </div>
           </div>
         </div>
@@ -753,8 +790,8 @@
 
   <div class="strip" aria-hidden="true">
     <div class="strip-track">
-      <span>64+ Konu<span class="sep"></span>13 Kategori<span class="sep"></span>590+ Örnek Cümle<span class="sep"></span><em>1200+ Quiz</em><span class="sep"></span>Ücretsiz<span class="sep"></span><em>Çevrimdışı</em><span class="sep"></span></span>
-      <span>64+ Konu<span class="sep"></span>13 Kategori<span class="sep"></span>590+ Örnek Cümle<span class="sep"></span><em>1200+ Quiz</em><span class="sep"></span>Ücretsiz<span class="sep"></span><em>Çevrimdışı</em><span class="sep"></span></span>
+      <span>13 Kategori<span class="sep"></span>68 Konu<span class="sep"></span>590+ Örnek Cümle<span class="sep"></span><em>Quizler</em><span class="sep"></span>Çalışma Takvimi<span class="sep"></span><em>Conditionals</em><span class="sep"></span></span>
+      <span>13 Kategori<span class="sep"></span>68 Konu<span class="sep"></span>590+ Örnek Cümle<span class="sep"></span><em>Quizler</em><span class="sep"></span>Çalışma Takvimi<span class="sep"></span><em>Conditionals</em><span class="sep"></span></span>
     </div>
   </div>
 
@@ -762,7 +799,7 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat"><div class="stat-value">13</div><div class="stat-label">Gramer Kategorisi</div></div>
-        <div class="stat"><div class="stat-value">68<sup>+</sup></div><div class="stat-label">Detaylı Konu</div></div>
+        <div class="stat"><div class="stat-value">68</div><div class="stat-label">Detaylı Konu</div></div>
         <div class="stat"><div class="stat-value">590<sup>+</sup></div><div class="stat-label">Örnek Cümle</div></div>
         <div class="stat"><div class="stat-value">1200<sup>+</sup></div><div class="stat-label">Quiz Sorusu</div></div>
       </div>
@@ -772,7 +809,7 @@
   <section class="section cats" id="kategoriler">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Konular</span>
+        <span class="eyebrow">Kategoriler</span>
         <h2 class="display-2">Tüm gramer konuları <span class="italic ink-orange">tek yerde.</span></h2>
         <p class="lead">Temelden ileri seviyeye yapılandırılmış dersler, formüller ve örnek cümlelerle İngilizceyi tam anlamıyla kavrayın.</p>
       </div>
@@ -785,18 +822,18 @@
       </div>
 
       <div class="cat-grid" id="catGrid">
-        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel · 11 Konu</span><h3>Tenses</h3><p>İngilizce zaman kalıpları ve kullanım bağlamları — Present, Past, Future</p><div class="cat-stats"><span>Zamanlar</span><span>11 konu</span></div></div>
-        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel · 5 Konu</span><h3>Articles</h3><p>a/an, the ve zero article kullanım kuralları</p><div class="cat-stats"><span>Artikeller</span><span>5 konu</span></div></div>
-        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel · 6 Konu</span><h3>Prepositions</h3><p>in/on/at, for/since, edatlarla doğru kullanım</p><div class="cat-stats"><span>Edatlar</span><span>6 konu</span></div></div>
-        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel · 5 Konu</span><h3>Conjunctions</h3><p>and/but/or/so ile cümleleri bağlama</p><div class="cat-stats"><span>Bağlaçlar</span><span>5 konu</span></div></div>
-        <div class="cat" data-level="orta"><span class="cat-tag orta">Orta · 5 Konu</span><h3>Modal Verbs</h3><p>can/could/must/should — yardımcı fiiller ve anlam nüansları</p><div class="cat-stats"><span>Yardımcı Fiiller</span><span>5 konu</span></div></div>
-        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel · 4 Konu</span><h3>Pronouns</h3><p>Subject, object ve possessive zamirler</p><div class="cat-stats"><span>Zamirler</span><span>4 konu</span></div></div>
-        <div class="cat" data-level="orta"><span class="cat-tag orta">Orta · 5 Konu</span><h3>Comparatives</h3><p>Karşılaştırma ve üstünlük dereceleri (-er/-est, more/most)</p><div class="cat-stats"><span>Karşılaştırma</span><span>5 konu</span></div></div>
-        <div class="cat" data-level="orta"><span class="cat-tag orta">Orta · 4 Konu</span><h3>Passive Voice</h3><p>Edilgen çatı yapısı (be + V3) ve zamanlara göre dönüşüm</p><div class="cat-stats"><span>Edilgen Yapı</span><span>4 konu</span></div></div>
-        <div class="cat" data-level="ileri"><span class="cat-tag ileri">İleri · 5 Konu</span><h3>Conditionals</h3><p>if clause — Type 0,1,2,3 ve mixed conditional yapıları</p><div class="cat-stats"><span>Koşul Cümleleri</span><span>5 konu</span></div></div>
-        <div class="cat" data-level="ileri"><span class="cat-tag ileri">İleri · 4 Konu</span><h3>Relative Clauses</h3><p>who/which/that ile sıfat cümlecikleri</p><div class="cat-stats"><span>Sıfat Cümlecikleri</span><span>4 konu</span></div></div>
-        <div class="cat" data-level="ileri"><span class="cat-tag ileri">İleri · 3 Konu</span><h3>Reported Speech</h3><p>Dolaylı anlatım, backshift ve reporting verbs</p><div class="cat-stats"><span>Dolaylı Anlatım</span><span>3 konu</span></div></div>
-        <div class="cat" data-level="orta"><span class="cat-tag orta">Orta · 4 Konu</span><h3>Phrasal Verbs</h3><p>get/look/turn/give ile takım fiiller</p><div class="cat-stats"><span>Takım Fiiller</span><span>4 konu</span></div></div>
+        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel</span><h3>Tenses</h3><p>İngilizce zaman kalıpları ve kullanımları — Present, Past, Future</p><div class="cat-stats"><span>📚 11 Konu</span><span>🎯 Zamanlar</span></div></div>
+        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel</span><h3>Articles</h3><p>Artikeller ve kullanımları — a, an, the farkı</p><div class="cat-stats"><span>📚 5 Konu</span><span>🎯 Artikeller</span></div></div>
+        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel</span><h3>Prepositions</h3><p>Edatlar ve kullanımları — in, on, at, for, since</p><div class="cat-stats"><span>📚 6 Konu</span><span>🎯 Edatlar</span></div></div>
+        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel</span><h3>Conjunctions</h3><p>Bağlaçlar ve kullanımları — and, but, or, so</p><div class="cat-stats"><span>📚 5 Konu</span><span>🎯 Bağlaçlar</span></div></div>
+        <div class="cat" data-level="orta"><span class="cat-tag orta">Orta</span><h3>Modal Verbs</h3><p>Yardımcı fiiller ve kullanımları — can, could, must, should</p><div class="cat-stats"><span>📚 5 Konu</span><span>🎯 Yardımcı F.</span></div></div>
+        <div class="cat" data-level="orta"><span class="cat-tag orta">Orta</span><h3>Comparatives</h3><p>Karşılaştırma ve üstünlük dereceleri — -er/-est, more/most</p><div class="cat-stats"><span>📚 5 Konu</span><span>🎯 Kıyaslama</span></div></div>
+        <div class="cat" data-level="orta"><span class="cat-tag orta">Orta</span><h3>Quantifiers</h3><p>Miktar belirteçleri — some, any, much, many, a lot of</p><div class="cat-stats"><span>📚 6 Konu</span><span>🎯 Miktar</span></div></div>
+        <div class="cat" data-level="orta"><span class="cat-tag orta">Orta</span><h3>Passive Voice</h3><p>Edilgen çatı yapısı — be + V3 ve zamanlara göre dönüşüm</p><div class="cat-stats"><span>📚 4 Konu</span><span>🎯 Edilgen</span></div></div>
+        <div class="cat" data-level="ileri"><span class="cat-tag ileri">İleri</span><h3>Conditionals</h3><p>Koşul cümleleri — Zero, First, Second, Third, Mixed</p><div class="cat-stats"><span>📚 5 Konu</span><span>🎯 If Clause</span></div></div>
+        <div class="cat" data-level="ileri"><span class="cat-tag ileri">İleri</span><h3>Relative Clauses</h3><p>Sıfat cümlecikleri — who, which, that, whose</p><div class="cat-stats"><span>📚 4 Konu</span><span>🎯 Bağıl Zamir</span></div></div>
+        <div class="cat" data-level="ileri"><span class="cat-tag ileri">İleri</span><h3>Reported Speech</h3><p>Dolaylı anlatım — backshift ve reporting verbs</p><div class="cat-stats"><span>📚 3 Konu</span><span>🎯 Anlatım</span></div></div>
+        <div class="cat" data-level="orta"><span class="cat-tag orta">Orta</span><h3>Phrasal Verbs</h3><p>Takım fiiller — get, look, turn, give ile kullanımlar</p><div class="cat-stats"><span>📚 4 Konu</span><span>🎯 Phrasal</span></div></div>
       </div>
     </div>
   </section>
@@ -813,21 +850,53 @@
           <h3>1. Konu Seç</h3>
           <p>13 kategoriden istediğin konuyu seç. Temelden ileri seviyeye sıralı ilerleme.</p>
         </div>
-        <div class="feature-visual"><div class="phone-sm"><div class="phone-screen"><div class="placeholder"><span>Kategori Ekranı</span></div></div></div></div>
+        <div class="feature-visual"><div class="phone-sm"><div class="phone-screen"><img src="images/categories.png" alt="Kategoriler" onerror="this.src='https://placehold.co/260x550/FEF3E8/F97316?text=Kategoriler'"/></div></div></div>
       </div>
       <div class="feature reverse">
         <div class="feature-text">
           <h3>2. Öğren</h3>
           <p>Yapısal formüller, açıklamalar ve 590+ örnek cümleyle konuyu derinlemesine kavra.</p>
         </div>
-        <div class="feature-visual"><div class="phone-sm"><div class="phone-screen"><div class="placeholder"><span>Konu Anlatımı</span></div></div></div></div>
+        <div class="feature-visual"><div class="phone-sm"><div class="phone-screen"><img src="images/lesson-detail.png" alt="Konu Anlatımı" onerror="this.src='https://placehold.co/260x550/FEF3E8/F97316?text=Anlatim'"/></div></div></div>
       </div>
       <div class="feature">
         <div class="feature-text">
           <h3>3. Quiz Yap</h3>
           <p>Her konunun ardından adaptif sorularla ne kadar öğrendiğini test et.</p>
         </div>
-        <div class="feature-visual"><div class="phone-sm"><div class="phone-screen"><div class="placeholder"><span>Quiz Ekranı</span></div></div></div></div>
+        <div class="feature-visual"><div class="phone-sm"><div class="phone-screen"><img src="images/quiz.png" alt="Quiz Ekranı" onerror="this.src='https://placehold.co/260x550/FEF3E8/F97316?text=Quiz'"/></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="showcase" id="vitrin">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" style="color: var(--primary-light);">Uygulama İçi</span>
+        <h2 class="display-2" style="color: white;">Tüm ekranlar <span class="italic" style="color: var(--primary);">tek bakışta.</span></h2>
+        <p class="lead" style="color: rgba(255,255,255,0.6);">Kategoriler, çalışma takvimi, konu anlatımı ve quiz — her şey parmak ucında.</p>
+      </div>
+      <div class="showcase-row">
+        <div class="showcase-card">
+          <div class="phone-screen"><img src="images/categories.png" alt="Kategoriler" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Kategoriler'"/></div>
+          <div class="showcase-tag"><small>01</small><strong>Kategoriler</strong></div>
+        </div>
+        <div class="showcase-card">
+          <div class="phone-screen"><img src="images/calendar.png" alt="Çalışma Takvimi" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Takvim'"/></div>
+          <div class="showcase-tag"><small>02</small><strong>Çalışma Takvimi</strong></div>
+        </div>
+        <div class="showcase-card">
+          <div class="phone-screen"><img src="images/conditionals-list.png" alt="Conditionals Listesi" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Conditionals'"/></div>
+          <div class="showcase-tag"><small>03</small><strong>Alt Konular</strong></div>
+        </div>
+        <div class="showcase-card">
+          <div class="phone-screen"><img src="images/lesson-detail.png" alt="Konu Anlatımı" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Anlatim'"/></div>
+          <div class="showcase-tag"><small>04</small><strong>Detaylı Anlatım</strong></div>
+        </div>
+        <div class="showcase-card">
+          <div class="phone-screen"><img src="images/quiz.png" alt="Quiz" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Quiz'"/></div>
+          <div class="showcase-tag"><small>05</small><strong>Quiz & Test</strong></div>
+        </div>
       </div>
     </div>
   </section>
@@ -840,13 +909,13 @@
       </div>
       <div class="testimonial-grid">
         <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"Conditional yapılarını hiç anlayamamıştım. Learnova'daki formüller ve örnekler sayesinde artık çok net."</div><div class="t-author">Ayşe K. — Üniversite Öğrencisi</div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"YDS sınavına hazırlanırken Learnova gerçekten fark yarattı. Passive voice ve reported speech bölümleri mükemmel."</div><div class="t-author">Murat E. — YDS Adayı</div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"Quizler gerçekten adaptif ve pekiştirici. Her gün 10–15 dakika ayırıyorum, fark çok belirgin."</div><div class="t-author">Zeynep A. — Lise Öğrencisi</div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"YDS sınavına hazırlanırken Learnova gerçekten fark yarattı. Çalışma takvimi ile düzenli ilerlemek çok kolay."</div><div class="t-author">Murat E. — YDS Adayı</div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"Quizler gerçekten pekiştirici. Her gün 10-15 dakika ayırıyorum, fark çok belirgin."</div><div class="t-author">Zeynep A. — Lise Öğrencisi</div></div>
       </div>
     </div>
   </section>
 
-  <section class="cta">
+  <section class="cta" id="indir">
     <div class="container">
       <span class="eyebrow no-line" style="justify-content: center; display: flex; color: var(--primary-light);">Hemen Başla</span>
       <h2 class="display-1" style="margin-top: 24px; color: white;">İngilizce dilbilgisini <span class="italic" style="color: var(--primary);">bugün çözüme kavuştur.</span></h2>
@@ -865,9 +934,9 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#" class="logo" style="font-size: 20px;">Learn<span style="color:var(--primary);">ova</span></a>
-          <p>İngilizce dilbilgisini hızla kavrayın. 13 kategoride 68+ konu, 590+ örnek cümle ve 1200+ quiz sorusu.</p>
+          <p>İngilizce dilbilgisini hızla kavrayın. 13 kategoride 68 konu, 590+ örnek cümle ve interaktif quizler.</p>
         </div>
-        <div><h5>Keşfet</h5><ul><li><a href="#kategoriler">Konular</a></li><li><a href="#nasil">Nasıl Çalışır</a></li><li><a href="#yorumlar">Yorumlar</a></li></ul></div>
+        <div><h5>Keşfet</h5><ul><li><a href="#kategoriler">Konular</a></li><li><a href="#nasil">Nasıl Çalışır</a></li><li><a href="#vitrin">Ekranlar</a></li><li><a href="#yorumlar">Yorumlar</a></li></ul></div>
         <div><h5>İndir</h5><ul><li><a href="https://play.google.com/store/apps/details?id=com.spinel.learnova" target="_blank">Google Play</a></li></ul></div>
         <div><h5>Yasal</h5><ul><li><a href="#">Kullanım Şartları</a></li><li><a href="#">Gizlilik Politikası</a></li></ul></div>
       </div>
@@ -898,6 +967,7 @@
 
     document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
+    // Category filtering
     document.querySelectorAll('.cat-filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.cat-filter-btn').forEach(b => b.classList.remove('active'));
