@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learnova — İngilizce Gramer Öğrenme Uygulaması</title>
-  <meta name="description" content="13 kategoride 68 konu, 590+ örnek cümle ile İngilizce dilbilgisini öğrenin. Çalışma takvimi, quizler ve detaylı konu anlatımları." />
+  <title>YÖKDİL Gramer — Akademik İngilizce Gramer Hazırlığı</title>
+  <meta name="description" content="YÖKDİL için akademik gramer konu anlatımı, örnek cümleler, açıklamalı quizler, PDF dışa aktarma ve günlük çalışma odakları." />
   <meta name="theme-color" content="#F97316" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <style>
     :root {
@@ -35,6 +35,8 @@
       --blue-soft: #EEF4FF;
       --pink: #EC4899;
       --pink-soft: #FDF2F8;
+      --purple: #7C3AED;
+      --purple-soft: #F4EEFF;
 
       --font-display: 'Nunito', system-ui, -apple-system, sans-serif;
       --font-body: 'Nunito', system-ui, -apple-system, sans-serif;
@@ -48,6 +50,8 @@
 
     *, *::before, *::after { box-sizing: border-box; }
 
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: var(--font-body);
@@ -60,7 +64,8 @@
 
     body::before {
       content: "";
-      position: fixed; inset: 0;
+      position: fixed;
+      inset: 0;
       pointer-events: none;
       z-index: 1;
       opacity: 0.3;
@@ -95,7 +100,7 @@
     .eyebrow {
       font-family: var(--font-body);
       font-size: 12px;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--primary);
@@ -105,7 +110,8 @@
     }
     .eyebrow::before {
       content: "";
-      width: 24px; height: 1px;
+      width: 24px;
+      height: 1px;
       background: currentColor;
     }
     .eyebrow.no-line::before { display: none; }
@@ -114,7 +120,7 @@
       font-size: clamp(17px, 1.4vw, 20px);
       color: var(--muted);
       line-height: 1.55;
-      max-width: 60ch;
+      max-width: 62ch;
     }
 
     .btn {
@@ -123,7 +129,7 @@
       gap: 10px;
       padding: 14px 24px;
       border-radius: 999px;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 15px;
       transition: all 0.25s ease;
       border: 1px solid transparent;
@@ -159,7 +165,7 @@
       -webkit-backdrop-filter: saturate(180%) blur(14px);
       background: rgba(250, 247, 242, 0.78);
       border-bottom: 1px solid transparent;
-      transition: border-color 0.3s ease;
+      transition: border-color 0.3s ease, background 0.3s ease;
     }
     .nav.scrolled {
       border-bottom-color: var(--hairline);
@@ -176,24 +182,28 @@
       align-items: center;
       gap: 10px;
       font-family: var(--font-display);
-      font-weight: 600;
+      font-weight: 800;
       font-size: 22px;
       letter-spacing: -0.02em;
       text-decoration: none;
       color: var(--ink);
     }
     .logo-mark {
-      width: 30px; height: 30px;
+      width: 30px;
+      height: 30px;
       border-radius: 9px;
       background: var(--primary);
-      display: grid; place-items: center;
+      display: grid;
+      place-items: center;
       color: #fff;
       box-shadow: inset 0 -6px 12px rgba(0,0,0,0.08);
     }
     .logo-mark svg { width: 16px; height: 16px; }
     .nav-links {
-      display: flex; gap: 36px;
-      font-size: 14px; font-weight: 500;
+      display: flex;
+      gap: 36px;
+      font-size: 14px;
+      font-weight: 700;
       color: var(--ink-2);
     }
     .nav-links a { color: inherit; text-decoration: none; transition: color 0.2s; }
@@ -219,19 +229,22 @@
     .hero-actions { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 12px; }
     .hero-meta {
       margin-top: 36px;
-      display: flex; align-items: center; gap: 16px;
-      font-size: 13px; color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--muted);
+      flex-wrap: wrap;
     }
-    .dots {
-      display: inline-flex; gap: 4px;
-    }
+    .dots { display: inline-flex; gap: 4px; }
     .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); opacity: 0.85; }
     .dot:nth-child(2) { opacity: 0.55; }
     .dot:nth-child(3) { opacity: 0.3; }
 
     .phone-stage {
       position: relative;
-      display: grid; place-items: center;
+      display: grid;
+      place-items: center;
       min-height: 560px;
     }
     .phone-stage::before {
@@ -275,7 +288,9 @@
       padding: 18px 20px;
       box-shadow: 0 24px 48px -20px rgba(28,28,30,0.18);
       z-index: 2;
-      display: flex; align-items: center; gap: 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
       animation: floaty 6s ease-in-out infinite;
     }
     @keyframes floaty {
@@ -285,25 +300,28 @@
     .float-card.fc-1 { top: 10%; left: -8%; animation-delay: 0s; }
     .float-card.fc-2 { bottom: 14%; right: -6%; animation-delay: 1.5s; }
     .fc-icon {
-      width: 42px; height: 42px;
+      width: 42px;
+      height: 42px;
       border-radius: 12px;
-      display: grid; place-items: center;
+      display: grid;
+      place-items: center;
       flex-shrink: 0;
     }
     .fc-icon.orange { background: var(--accent-soft); color: var(--primary); }
     .fc-icon.green { background: var(--success-soft); color: var(--success); }
+    .fc-icon.blue { background: var(--blue-soft); color: var(--blue); }
     .fc-icon svg { width: 20px; height: 20px; }
     .fc-text small {
       font-size: 11px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--muted-2);
-      font-weight: 600;
+      font-weight: 800;
     }
     .fc-text strong {
       display: block;
       font-family: var(--font-display);
-      font-weight: 500;
+      font-weight: 800;
       font-size: 18px;
       margin-top: 2px;
     }
@@ -337,7 +355,8 @@
     }
     .strip-track span { display: inline-flex; align-items: center; gap: 56px; }
     .strip-track .sep {
-      width: 8px; height: 8px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: var(--primary);
       display: inline-block;
@@ -345,12 +364,10 @@
     .strip-track em { color: var(--primary); font-style: italic; }
     @keyframes marquee {
       from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
+      to { transform: translateX(-50%); }
     }
 
-    .stats {
-      padding: 80px 0;
-    }
+    .stats { padding: 80px 0; }
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -366,7 +383,7 @@
     .stat-value {
       font-family: var(--font-display);
       font-size: clamp(40px, 5vw, 64px);
-      font-weight: 400;
+      font-weight: 500;
       line-height: 1;
       letter-spacing: -0.03em;
     }
@@ -389,7 +406,7 @@
       z-index: 2;
     }
     .section-head {
-      max-width: 760px;
+      max-width: 780px;
       margin-bottom: 64px;
     }
     .section-head h2 { margin-top: 24px; }
@@ -411,7 +428,7 @@
       padding: 8px 20px;
       border-radius: 999px;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 800;
       cursor: pointer;
       border: 1px solid var(--hairline);
       background: transparent;
@@ -442,8 +459,11 @@
       box-shadow: 0 30px 60px -30px rgba(28,28,30,0.18);
     }
     .cat-tag {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 11px; font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 900;
       padding: 6px 12px;
       border-radius: 999px;
       letter-spacing: 0.04em;
@@ -454,7 +474,7 @@
     .cat h3 {
       margin-top: 20px;
       font-size: 28px;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: -0.02em;
     }
     .cat p {
@@ -471,14 +491,9 @@
       color: var(--muted-2);
       display: flex;
       justify-content: space-between;
+      gap: 12px;
     }
-    .cat-stats strong {
-      font-family: var(--font-display);
-      font-weight: 500;
-      font-size: 20px;
-      display: block;
-      color: var(--ink);
-    }
+    .cat-stats span:last-child { color: var(--primary-dark); font-weight: 800; }
 
     @media (max-width: 880px) {
       .cat-grid { grid-template-columns: repeat(2, 1fr); }
@@ -498,7 +513,7 @@
     .feature.reverse .feature-visual { order: 2; }
     .feature-text h3 {
       font-size: clamp(30px, 3.4vw, 44px);
-      font-weight: 500;
+      font-weight: 600;
       margin-top: 16px;
     }
     .feature-text p {
@@ -515,22 +530,30 @@
       gap: 12px;
     }
     .feature-list li {
-      display: flex; align-items: center; gap: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
       font-size: 15px;
       color: var(--ink-2);
     }
     .feature-list .check {
-      width: 22px; height: 22px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       background: var(--success-soft);
       color: var(--success);
-      display: inline-flex; align-items: center; justify-content: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 900;
+      flex-shrink: 0;
     }
-    .feature-list .check svg { width: 12px; height: 12px; }
 
     .feature-visual {
       position: relative;
-      display: grid; place-items: center;
+      display: grid;
+      place-items: center;
       min-height: 480px;
     }
     .feature-visual::before {
@@ -573,7 +596,7 @@
     .t-card:hover { transform: translateY(-4px); }
     .t-stars { color: var(--primary); font-size: 14px; margin-bottom: 16px; letter-spacing: 2px; }
     .t-text { font-size: 15px; color: var(--ink-2); line-height: 1.65; margin-bottom: 20px; }
-    .t-author { font-size: 13px; font-weight: 700; color: var(--ink); }
+    .t-author { font-size: 13px; font-weight: 800; color: var(--ink); }
     @media (max-width: 880px) {
       .testimonial-grid { grid-template-columns: 1fr; gap: 16px; }
     }
@@ -608,7 +631,8 @@
     .showcase-card .phone-screen img { object-fit: cover; }
     .showcase-tag {
       margin-top: 16px;
-      display: flex; flex-direction: column;
+      display: flex;
+      flex-direction: column;
       padding: 0 8px;
     }
     .showcase-tag small {
@@ -629,7 +653,6 @@
       position: relative;
       z-index: 2;
     }
-    .cta .sec-title { color: white; }
     .cta .lead { color: rgba(255,255,255,0.6); margin: 24px auto 0; }
     .cta-actions { margin-top: 44px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
 
@@ -650,7 +673,7 @@
       font-size: 14px;
     }
     .footer h5 {
-      font-weight: 600;
+      font-weight: 800;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.12em;
@@ -718,13 +741,13 @@
             <path d="M5 12l4 4L19 6"/>
           </svg>
         </span>
-        Learn<span style="color:var(--primary);">ova</span>
+        YÖKDİL<span style="color:var(--primary);"> Gramer</span>
       </a>
       <nav class="nav-links">
-        <a href="#kategoriler">Konular</a>
-        <a href="#nasil">Nasıl Çalışır</a>
+        <a href="#kategoriler">YÖKDİL Konuları</a>
+        <a href="#ozellikler">Özellikler</a>
         <a href="#vitrin">Ekranlar</a>
-        <a href="#yorumlar">Yorumlar</a>
+        <a href="#indir">İndir</a>
       </nav>
       <div class="hero-actions" style="margin:0;">
         <a href="https://play.google.com/store/apps/details?id=com.spinel.learnova" target="_blank" class="btn btn-primary" style="padding:10px 18px; font-size:14px;">
@@ -739,23 +762,23 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow reveal">İngilizce Gramer Öğrenme Uygulaması</span>
+          <span class="eyebrow reveal">YÖKDİL Odaklı Akademik Gramer</span>
           <h1 class="display-1 reveal delay-1">
-            Dilbilgisini <span class="italic ink-orange">hızla</span> kavrayın.
+            YÖKDİL gramerini <span class="italic ink-orange">sınav mantığıyla</span> çalışın.
           </h1>
           <p class="lead reveal delay-2">
-            13 kategoride 68 konu, 590+ örnek cümle ve interaktif quizlerle İngilizce dilbilgisini kalıcı olarak öğrenin. Çalışma takviminizle ilerlemenizi takip edin.
+            YÖKDİL Gramer; akademik İngilizce cümle yapılarını, bağlaçları, relative clause, noun clause, passive voice ve conditionals gibi sınavda sık karşılaşılan konuları Türkçe anlatımla çalışmanıza yardımcı olur.
           </p>
           <div class="hero-actions reveal delay-3">
             <a href="https://play.google.com/store/apps/details?id=com.spinel.learnova" target="_blank" class="btn btn-primary">
               Google Play'den İndir
               <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <a href="#nasil" class="btn btn-secondary">Nasıl Çalışır?</a>
+            <a href="#ozellikler" class="btn btn-secondary">Özellikleri Gör</a>
           </div>
           <div class="hero-meta reveal delay-4">
             <span class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
-            Ücretsiz · Reklamsız · Çevrimdışı
+            Türkçe anlatım · Açıklamalı quizler · PDF dışa aktarma · Günlük YÖKDİL odağı
           </div>
         </div>
 
@@ -765,13 +788,13 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
             </div>
             <div class="fc-text">
-              <small>Toplam Çalışma</small>
-              <strong>12 gün</strong>
+              <small>Bugünün Odağı</small>
+              <strong>YÖKDİL taktiği</strong>
             </div>
           </div>
           <div class="phone">
             <div class="phone-screen">
-              <img src="images/categories.png" alt="Learnova Kategoriler" onerror="this.src='https://placehold.co/300x650/FEF3E8/F97316?text=Kategoriler'"/>
+              <img src="images/categories.png" alt="YÖKDİL Gramer Kategorileri" onerror="this.src='https://placehold.co/300x650/FEF3E8/F97316?text=YOKDIL+Gramer'"/>
             </div>
           </div>
           <div class="float-card fc-2">
@@ -779,8 +802,8 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13.5 2L4 14h7l-1 8 9.5-12h-7l1-8z"/></svg>
             </div>
             <div class="fc-text">
-              <small>Gün Serisi</small>
-              <strong>2 gün</strong>
+              <small>PDF Notu</small>
+              <strong>Dışa aktar</strong>
             </div>
           </div>
         </div>
@@ -790,18 +813,18 @@
 
   <div class="strip" aria-hidden="true">
     <div class="strip-track">
-      <span>13 Kategori<span class="sep"></span>68 Konu<span class="sep"></span>590+ Örnek Cümle<span class="sep"></span><em>Quizler</em><span class="sep"></span>Çalışma Takvimi<span class="sep"></span><em>Conditionals</em><span class="sep"></span></span>
-      <span>13 Kategori<span class="sep"></span>68 Konu<span class="sep"></span>590+ Örnek Cümle<span class="sep"></span><em>Quizler</em><span class="sep"></span>Çalışma Takvimi<span class="sep"></span><em>Conditionals</em><span class="sep"></span></span>
+      <span>YÖKDİL Gramer<span class="sep"></span>Akademik Örnekler<span class="sep"></span>Açıklamalı Quizler<span class="sep"></span><em>PDF Dışa Aktarma</em><span class="sep"></span>Relative Clauses<span class="sep"></span><em>Bağlaç Taktikleri</em><span class="sep"></span></span>
+      <span>YÖKDİL Gramer<span class="sep"></span>Akademik Örnekler<span class="sep"></span>Açıklamalı Quizler<span class="sep"></span><em>PDF Dışa Aktarma</em><span class="sep"></span>Relative Clauses<span class="sep"></span><em>Bağlaç Taktikleri</em><span class="sep"></span></span>
     </div>
   </div>
 
   <section class="stats">
     <div class="container">
       <div class="stats-grid">
-        <div class="stat"><div class="stat-value">13</div><div class="stat-label">Gramer Kategorisi</div></div>
-        <div class="stat"><div class="stat-value">68</div><div class="stat-label">Detaylı Konu</div></div>
-        <div class="stat"><div class="stat-value">590<sup>+</sup></div><div class="stat-label">Örnek Cümle</div></div>
-        <div class="stat"><div class="stat-value">1200<sup>+</sup></div><div class="stat-label">Quiz Sorusu</div></div>
+        <div class="stat"><div class="stat-value">13</div><div class="stat-label">YÖKDİL Gramer Kategorisi</div></div>
+        <div class="stat"><div class="stat-value">68</div><div class="stat-label">Akademik Konu Anlatımı</div></div>
+        <div class="stat"><div class="stat-value">590<sup>+</sup></div><div class="stat-label">Örnek Cümle ve Çeviri</div></div>
+        <div class="stat"><div class="stat-value">PDF</div><div class="stat-label">Konu Notlarını Dışa Aktarma</div></div>
       </div>
     </div>
   </section>
@@ -809,62 +832,106 @@
   <section class="section cats" id="kategoriler">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Kategoriler</span>
-        <h2 class="display-2">Tüm gramer konuları <span class="italic ink-orange">tek yerde.</span></h2>
-        <p class="lead">Temelden ileri seviyeye yapılandırılmış dersler, formüller ve örnek cümlelerle İngilizceyi tam anlamıyla kavrayın.</p>
+        <span class="eyebrow">YÖKDİL Konuları</span>
+        <h2 class="display-2">YÖKDİL’de işinize yarayan gramer konuları <span class="italic ink-orange">tek yerde.</span></h2>
+        <p class="lead">Akademik metinlerde sık görülen cümle yapıları, bağlaçlar, clause türleri ve sınavda karşınıza çıkabilecek gramer ilişkileri Türkçe anlatımla sunulur.</p>
       </div>
 
       <div class="cat-filter">
         <button class="cat-filter-btn active" data-filter="all">Tümü</button>
         <button class="cat-filter-btn" data-filter="temel">Temel</button>
-        <button class="cat-filter-btn" data-filter="orta">Orta</button>
-        <button class="cat-filter-btn" data-filter="ileri">İleri</button>
+        <button class="cat-filter-btn" data-filter="orta">Akademik</button>
+        <button class="cat-filter-btn" data-filter="ileri">YÖKDİL</button>
       </div>
 
       <div class="cat-grid" id="catGrid">
-        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel</span><h3>Tenses</h3><p>İngilizce zaman kalıpları ve kullanımları — Present, Past, Future</p><div class="cat-stats"><span>11 Konu</span><span>Zamanlar</span></div></div>
-        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel</span><h3>Articles</h3><p>Artikeller ve kullanımları — a, an, the farkı</p><div class="cat-stats"><span>5 Konu</span><span>Artikeller</span></div></div>
-        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel</span><h3>Prepositions</h3><p>Edatlar ve kullanımları — in, on, at, for, since</p><div class="cat-stats"><span>6 Konu</span><span>Edatlar</span></div></div>
-        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel</span><h3>Conjunctions</h3><p>Bağlaçlar ve kullanımları — and, but, or, so</p><div class="cat-stats"><span>5 Konu</span><span>Bağlaçlar</span></div></div>
-        <div class="cat" data-level="orta"><span class="cat-tag orta">Orta</span><h3>Modal Verbs</h3><p>Yardımcı fiiller ve kullanımları — can, could, must, should</p><div class="cat-stats"><span>5 Konu</span><span>Yardımcı F.</span></div></div>
-        <div class="cat" data-level="orta"><span class="cat-tag orta">Orta</span><h3>Comparatives</h3><p>Karşılaştırma ve üstünlük dereceleri — -er/-est, more/most</p><div class="cat-stats"><span>5 Konu</span><span>Kıyaslama</span></div></div>
-        <div class="cat" data-level="orta"><span class="cat-tag orta">Orta</span><h3>Quantifiers</h3><p>Miktar belirteçleri — some, any, much, many, a lot of</p><div class="cat-stats"><span>6 Konu</span><span>Miktar</span></div></div>
-        <div class="cat" data-level="orta"><span class="cat-tag orta">Orta</span><h3>Passive Voice</h3><p>Edilgen çatı yapısı — be + V3 ve zamanlara göre dönüşüm</p><div class="cat-stats"><span>4 Konu</span><span>Edilgen</span></div></div>
-        <div class="cat" data-level="ileri"><span class="cat-tag ileri">İleri</span><h3>Conditionals</h3><p>Koşul cümleleri — Zero, First, Second, Third, Mixed</p><div class="cat-stats"><span>5 Konu</span><span>If Clause</span></div></div>
-        <div class="cat" data-level="ileri"><span class="cat-tag ileri">İleri</span><h3>Relative Clauses</h3><p>Sıfat cümlecikleri — who, which, that, whose</p><div class="cat-stats"><span>4 Konu</span><span>Bağıl Zamir</span></div></div>
-        <div class="cat" data-level="ileri"><span class="cat-tag ileri">İleri</span><h3>Reported Speech</h3><p>Dolaylı anlatım — backshift ve reporting verbs</p><div class="cat-stats"><span>3 Konu</span><span>Anlatım</span></div></div>
-        <div class="cat" data-level="orta"><span class="cat-tag orta">Orta</span><h3>Phrasal Verbs</h3><p>Takım fiiller — get, look, turn, give ile kullanımlar</p><div class="cat-stats"><span>4 Konu</span><span>Phrasal</span></div></div>
+        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel</span><h3>Tenses</h3><p>Akademik metinlerde zaman uyumu, olay sırası ve anlam ilişkisini doğru yorumlama.</p><div class="cat-stats"><span>Zaman Uyumu</span><span>Tenses</span></div></div>
+        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel</span><h3>Articles</h3><p>A, an, the ve article kullanılmayan akademik ifadelerde doğru kullanım mantığı.</p><div class="cat-stats"><span>İsim Kullanımı</span><span>Articles</span></div></div>
+        <div class="cat" data-level="orta"><span class="cat-tag orta">Akademik</span><h3>Prepositions</h3><p>Academic English içinde sık geçen in, on, at, by, for, of ve with kullanımları.</p><div class="cat-stats"><span>Kalıp İfadeler</span><span>Edat</span></div></div>
+        <div class="cat" data-level="ileri"><span class="cat-tag ileri">YÖKDİL</span><h3>Conjunctions</h3><p>Zıtlık, neden-sonuç, amaç ve koşul ilişkilerini kuran sınav bağlaçları.</p><div class="cat-stats"><span>Anlam İlişkisi</span><span>Bağlaç</span></div></div>
+        <div class="cat" data-level="orta"><span class="cat-tag orta">Akademik</span><h3>Modal Verbs</h3><p>Olasılık, zorunluluk, çıkarım ve tavsiye anlamlarını akademik cümlelerde ayırt etme.</p><div class="cat-stats"><span>Meaning</span><span>Modal</span></div></div>
+        <div class="cat" data-level="orta"><span class="cat-tag orta">Akademik</span><h3>Comparatives</h3><p>Akademik karşılaştırma cümlelerinde more, less, as...as ve than yapılarını anlama.</p><div class="cat-stats"><span>Karşılaştırma</span><span>Compare</span></div></div>
+        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel</span><h3>Quantifiers</h3><p>Much, many, several, a number of ve amount of gibi miktar ifadelerini doğru seçme.</p><div class="cat-stats"><span>Miktar</span><span>Quantifier</span></div></div>
+        <div class="cat" data-level="orta"><span class="cat-tag orta">Akademik</span><h3>Passive Voice</h3><p>Bilimsel metinlerde sık geçen edilgen yapılar ve akademik anlatım kalıpları.</p><div class="cat-stats"><span>Be + V3</span><span>Passive</span></div></div>
+        <div class="cat" data-level="ileri"><span class="cat-tag ileri">YÖKDİL</span><h3>Conditionals</h3><p>If, unless, provided that ve as long as gibi koşul yapılarının sınav kullanımı.</p><div class="cat-stats"><span>Koşul</span><span>If Clause</span></div></div>
+        <div class="cat" data-level="ileri"><span class="cat-tag ileri">YÖKDİL</span><h3>Relative Clauses</h3><p>Akademik metinlerde isimleri açıklayan who, which, that, where ve whose yapıları.</p><div class="cat-stats"><span>Yapı Analizi</span><span>Clause</span></div></div>
+        <div class="cat" data-level="ileri"><span class="cat-tag ileri">YÖKDİL</span><h3>Noun Clauses</h3><p>That, whether, if ve wh- clause yapılarıyla akademik görüş ve bulgu aktarma.</p><div class="cat-stats"><span>Soru Sırası</span><span>Clause</span></div></div>
+        <div class="cat" data-level="orta"><span class="cat-tag orta">Akademik</span><h3>Reported Speech</h3><p>Research suggests that, experts argue that gibi aktarma yapılarında zaman ve anlam uyumu.</p><div class="cat-stats"><span>Aktarım</span><span>Report</span></div></div>
+        <div class="cat" data-level="ileri"><span class="cat-tag ileri">YÖKDİL</span><h3>Gerund & Infinitive</h3><p>Fiil sonrası V-ing veya to V seçimini akademik kullanım ve sınav mantığıyla öğrenme.</p><div class="cat-stats"><span>Verb Pattern</span><span>V-ing / to V</span></div></div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="nasil">
+  <section class="section" id="ozellikler">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Nasıl Çalışır</span>
-        <h2 class="display-2">3 adımda <span class="italic ink-orange">etkili öğrenme.</span></h2>
-        <p class="lead">Sadece ezber değil, gerçek kavrayış.</p>
+        <span class="eyebrow">Uygulama Özellikleri</span>
+        <h2 class="display-2">YÖKDİL gramer çalışmasını <span class="italic ink-orange">daha düzenli</span> hale getirir.</h2>
+        <p class="lead">Konu anlatımı, akademik örnekler, açıklamalı quizler, PDF dışa aktarma ve günlük çalışma odaklarıyla her konuyu daha sistemli çalışabilirsiniz.</p>
       </div>
+
       <div class="feature">
         <div class="feature-text">
-          <h3>1. Konu Seç</h3>
-          <p>13 kategoriden istediğin konuyu seç. Temelden ileri seviyeye sıralı ilerleme.</p>
+          <span class="eyebrow">01</span>
+          <h3>YÖKDİL odaklı konu anlatımı</h3>
+          <p>Konular genel İngilizce mantığıyla değil, YÖKDİL’de karşınıza çıkan akademik cümle yapıları dikkate alınarak hazırlanır.</p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> Türkçe açıklamalı gramer anlatımı</li>
+            <li><span class="check">✓</span> Akademik örnek cümleler</li>
+            <li><span class="check">✓</span> Sınavda sık karıştırılan yapılar</li>
+          </ul>
         </div>
-        <div class="feature-visual"><div class="phone-sm"><div class="phone-screen"><img src="images/categories.png" alt="Kategoriler" onerror="this.src='https://placehold.co/260x550/FEF3E8/F97316?text=Kategoriler'"/></div></div></div>
+        <div class="feature-visual">
+          <div class="phone-sm"><div class="phone-screen"><img src="images/lesson-detail.png" alt="YÖKDİL konu anlatımı" onerror="this.src='https://placehold.co/260x550/FEF3E8/F97316?text=Konu+Anlatimi'"/></div></div>
+        </div>
       </div>
+
       <div class="feature reverse">
         <div class="feature-text">
-          <h3>2. Öğren</h3>
-          <p>Yapısal formüller, açıklamalar ve 590+ örnek cümleyle konuyu derinlemesine kavra.</p>
+          <span class="eyebrow">02</span>
+          <h3>Açıklamalı YÖKDİL mini quizleri</h3>
+          <p>Her konunun sonunda yer alan sorular, sadece doğru cevabı göstermek için değil; neden doğru olduğunu açıklamak için hazırlanmıştır.</p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> Konu bazlı mini quizler</li>
+            <li><span class="check">✓</span> Doğru cevap açıklamaları</li>
+            <li><span class="check">✓</span> Yanlış seçenekleri anlama pratiği</li>
+          </ul>
         </div>
-        <div class="feature-visual"><div class="phone-sm"><div class="phone-screen"><img src="images/lesson-detail.png" alt="Konu Anlatımı" onerror="this.src='https://placehold.co/260x550/FEF3E8/F97316?text=Anlatim'"/></div></div></div>
+        <div class="feature-visual">
+          <div class="phone-sm"><div class="phone-screen"><img src="images/quiz.png" alt="Açıklamalı YÖKDİL quiz" onerror="this.src='https://placehold.co/260x550/FEF3E8/F97316?text=Mini+Quiz'"/></div></div>
+        </div>
       </div>
+
       <div class="feature">
         <div class="feature-text">
-          <h3>3. Quiz Yap</h3>
-          <p>Her konunun ardından adaptif sorularla ne kadar öğrendiğini test et.</p>
+          <span class="eyebrow">03</span>
+          <h3>PDF olarak dışa aktar</h3>
+          <p>Çalıştığınız gramer konusunu PDF olarak dışa aktarabilir, daha sonra tekrar etmek için kendi konu notunuzu oluşturabilirsiniz.</p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> Konu özeti PDF çıktısı</li>
+            <li><span class="check">✓</span> Örnek cümleler ve çeviriler</li>
+            <li><span class="check">✓</span> Açıklamalı quiz cevapları</li>
+          </ul>
         </div>
-        <div class="feature-visual"><div class="phone-sm"><div class="phone-screen"><img src="images/quiz.png" alt="Quiz Ekranı" onerror="this.src='https://placehold.co/260x550/FEF3E8/F97316?text=Quiz'"/></div></div></div>
+        <div class="feature-visual">
+          <div class="phone-sm"><div class="phone-screen"><img src="images/pdf-export.png" alt="PDF dışa aktarma" onerror="this.src='https://placehold.co/260x550/FEF3E8/F97316?text=PDF+Export'"/></div></div>
+        </div>
+      </div>
+
+      <div class="feature reverse">
+        <div class="feature-text">
+          <span class="eyebrow">04</span>
+          <h3>Günlük YÖKDİL odağı ve bildirimler</h3>
+          <p>Uygulama her gün farklı bir gramer veya sınav taktiğini öne çıkararak çalışmanızı daha hedefli hale getirir. Bildirimlerle çalışma hatırlatmaları alabilirsiniz.</p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> Günlük gramer odağı</li>
+            <li><span class="check">✓</span> Bağlaç, clause ve passive taktikleri</li>
+            <li><span class="check">✓</span> FCM destekli çalışma hatırlatmaları</li>
+          </ul>
+        </div>
+        <div class="feature-visual">
+          <div class="phone-sm"><div class="phone-screen"><img src="images/daily-focus.png" alt="Günün YÖKDİL odağı" onerror="this.src='https://placehold.co/260x550/FEF3E8/F97316?text=Gunluk+Odak'"/></div></div>
+        </div>
       </div>
     </div>
   </section>
@@ -874,28 +941,28 @@
       <div class="section-head">
         <span class="eyebrow" style="color: var(--primary-light);">Uygulama İçi</span>
         <h2 class="display-2" style="color: white;">Tüm ekranlar <span class="italic" style="color: var(--primary);">tek bakışta.</span></h2>
-        <p class="lead" style="color: rgba(255,255,255,0.6);">Kategoriler, çalışma takvimi, konu anlatımı ve quiz — her şey parmak ucında.</p>
+        <p class="lead" style="color: rgba(255,255,255,0.6);">YÖKDİL gramer kategorileri, konu anlatımları, akademik örnekler, açıklamalı quizler ve PDF dışa aktarma ekranları tek yerde.</p>
       </div>
       <div class="showcase-row">
         <div class="showcase-card">
-          <div class="phone-screen"><img src="images/categories.png" alt="Kategoriler" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Kategoriler'"/></div>
-          <div class="showcase-tag"><small>01</small><strong>Kategoriler</strong></div>
+          <div class="phone-screen"><img src="images/categories.png" alt="YÖKDİL kategorileri" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Kategoriler'"/></div>
+          <div class="showcase-tag"><small>01</small><strong>YÖKDİL Kategorileri</strong></div>
         </div>
         <div class="showcase-card">
-          <div class="phone-screen"><img src="images/calendar.png" alt="Çalışma Takvimi" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Takvim'"/></div>
-          <div class="showcase-tag"><small>02</small><strong>Çalışma Takvimi</strong></div>
+          <div class="phone-screen"><img src="images/lesson-list.png" alt="Konu listesi" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Konu+Listesi'"/></div>
+          <div class="showcase-tag"><small>02</small><strong>Konu Listesi</strong></div>
         </div>
         <div class="showcase-card">
-          <div class="phone-screen"><img src="images/lesson-list.png" alt="Konu Listesi" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Conditionals'"/></div>
-          <div class="showcase-tag"><small>03</small><strong>Alt Konular</strong></div>
+          <div class="phone-screen"><img src="images/lesson-detail.png" alt="Akademik anlatım" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Anlatim'"/></div>
+          <div class="showcase-tag"><small>03</small><strong>Akademik Anlatım</strong></div>
         </div>
         <div class="showcase-card">
-          <div class="phone-screen"><img src="images/lesson-detail.png" alt="Konu Anlatımı" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Anlatim'"/></div>
-          <div class="showcase-tag"><small>04</small><strong>Detaylı Anlatım</strong></div>
+          <div class="phone-screen"><img src="images/quiz.png" alt="Mini quiz" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Quiz'"/></div>
+          <div class="showcase-tag"><small>04</small><strong>Mini Quiz</strong></div>
         </div>
         <div class="showcase-card">
-          <div class="phone-screen"><img src="images/quiz.png" alt="Quiz" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Quiz'"/></div>
-          <div class="showcase-tag"><small>05</small><strong>Quiz & Test</strong></div>
+          <div class="phone-screen"><img src="images/pdf-export.png" alt="PDF dışa aktarma" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=PDF'"/></div>
+          <div class="showcase-tag"><small>05</small><strong>PDF Dışa Aktarma</strong></div>
         </div>
       </div>
     </div>
@@ -905,12 +972,12 @@
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">Kullanıcılar</span>
-        <h2 class="display-2">Öğrenenler <span class="italic ink-orange">ne diyor?</span></h2>
+        <h2 class="display-2">YÖKDİL adayları <span class="italic ink-orange">ne diyor?</span></h2>
       </div>
       <div class="testimonial-grid">
-        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"Conditional yapılarını hiç anlayamamıştım. Learnova'daki formüller ve örnekler sayesinde artık çok net."</div><div class="t-author">Ayşe K. — Üniversite Öğrencisi</div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"YDS sınavına hazırlanırken Learnova gerçekten fark yarattı. Çalışma takvimi ile düzenli ilerlemek çok kolay."</div><div class="t-author">Murat E. — YDS Adayı</div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"Quizler gerçekten pekiştirici. Her gün 10-15 dakika ayırıyorum, fark çok belirgin."</div><div class="t-author">Zeynep A. — Lise Öğrencisi</div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"Relative clause ve bağlaç sorularında neye bakmam gerektiğini daha net anladım. Açıklamalar kısa ama sınav için işe yarar."</div><div class="t-author">YÖKDİL Adayı</div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"Konu anlatımından sonra PDF çıktısı alabilmek güzel. Özellikle sınav öncesi tekrar için kullanışlı."</div><div class="t-author">Yüksek Lisans Adayı</div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"Açıklamalı quizler sayesinde sadece cevabı değil, neden o cevabın doğru olduğunu da görebiliyorum."</div><div class="t-author">Akademik İngilizce Öğrencisi</div></div>
       </div>
     </div>
   </section>
@@ -918,8 +985,8 @@
   <section class="cta" id="indir">
     <div class="container">
       <span class="eyebrow no-line" style="justify-content: center; display: flex; color: var(--primary-light);">Hemen Başla</span>
-      <h2 class="display-1" style="margin-top: 24px; color: white;">İngilizce dilbilgisini <span class="italic" style="color: var(--primary);">bugün çözüme kavuştur.</span></h2>
-      <p class="lead" style="max-width: 500px;">Ücretsiz indir, hemen öğrenmeye başla.</p>
+      <h2 class="display-1" style="margin-top: 24px; color: white;">YÖKDİL gramer çalışmanı <span class="italic" style="color: var(--primary);">bugün düzenle.</span></h2>
+      <p class="lead" style="max-width: 560px;">Akademik gramer konularını Türkçe anlatım, örnek cümleler, açıklamalı quizler ve PDF notlarıyla çalışmaya başla.</p>
       <div class="cta-actions">
         <a href="https://play.google.com/store/apps/details?id=com.spinel.learnova" target="_blank" class="btn btn-primary" style="background: var(--primary); color: var(--ink);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.28a2 2 0 0 0 2.83 0L17.66 12 6.01.72a2 2 0 0 0-2.83 2.84L13.17 12 3.18 20.44a2 2 0 0 0 0 2.84z"/></svg>
@@ -933,16 +1000,16 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="logo" style="font-size: 20px;">Learn<span style="color:var(--primary);">ova</span></a>
-          <p>İngilizce dilbilgisini hızla kavrayın. 13 kategoride 68 konu, 590+ örnek cümle ve interaktif quizler.</p>
+          <a href="#" class="logo" style="font-size: 20px;">YÖKDİL<span style="color:var(--primary);"> Gramer</span></a>
+          <p>YÖKDİL Gramer; akademik İngilizce gramer konularını Türkçe anlatım, örnek cümleler, açıklamalı quizler ve PDF dışa aktarma özelliğiyle çalışmanıza yardımcı olur.</p>
         </div>
-        <div><h5>Keşfet</h5><ul><li><a href="#kategoriler">Konular</a></li><li><a href="#nasil">Nasıl Çalışır</a></li><li><a href="#vitrin">Ekranlar</a></li><li><a href="#yorumlar">Yorumlar</a></li></ul></div>
+        <div><h5>Keşfet</h5><ul><li><a href="#kategoriler">YÖKDİL Konuları</a></li><li><a href="#ozellikler">Özellikler</a></li><li><a href="#vitrin">Ekranlar</a></li><li><a href="#yorumlar">Yorumlar</a></li></ul></div>
         <div><h5>İndir</h5><ul><li><a href="https://play.google.com/store/apps/details?id=com.spinel.learnova" target="_blank">Google Play</a></li></ul></div>
         <div><h5>Yasal</h5><ul><li><a href="#">Kullanım Şartları</a></li><li><a href="privacy.html">Gizlilik Politikası</a></li></ul></div>
       </div>
       <div class="footer-base">
-        <span>© <span id="year">2026</span> Learnova. Tüm hakları saklıdır.</span>
-        <span>Ücretsiz · Reklamsız · Çevrimdışı</span>
+        <span>© <span id="year">2026</span> YÖKDİL Gramer. Tüm hakları saklıdır.</span>
+        <span>Türkçe anlatım · Açıklamalı quizler · PDF dışa aktarma</span>
       </div>
     </div>
   </footer>
@@ -956,28 +1023,30 @@
       else nav.classList.remove('scrolled');
     });
 
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.classList.add('in');
-          io.unobserve(e.target);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
-    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    document.querySelectorAll('.cat-filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.cat-filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        document.querySelectorAll('.cat').forEach(cat => {
-          if (filter === 'all' || cat.dataset.level === filter) {
-            cat.style.display = '';
-          } else {
-            cat.style.display = 'none';
-          }
+    const filterButtons = document.querySelectorAll('.cat-filter-btn');
+    const categoryCards = document.querySelectorAll('.cat');
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filter = button.dataset.filter;
+
+        categoryCards.forEach((card) => {
+          const visible = filter === 'all' || card.dataset.level === filter;
+          card.style.display = visible ? 'block' : 'none';
         });
       });
     });
