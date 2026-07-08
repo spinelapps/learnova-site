@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YÖKDİL Gramer — Akademik İngilizce Gramer Hazırlığı</title>
-  <meta name="description" content="YÖKDİL için akademik gramer konu anlatımı, örnek cümleler, açıklamalı quizler, PDF dışa aktarma ve günlük çalışma odakları." />
+  <meta name="description" content="YÖKDİL için akademik gramer konu anlatımı, örnek cümleler, açıklamalı quizler ve PDF dışa aktarma." />
   <meta name="theme-color" content="#F97316" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -57,8 +57,8 @@
       font-family: var(--font-body);
       color: var(--ink);
       background: var(--bg);
-      font-size: 16px;
-      line-height: 1.55;
+      font-size: 15px;
+      line-height: 1.58;
       overflow-x: hidden;
     }
 
@@ -83,16 +83,16 @@
 
     h1, h2, h3, h4 {
       font-family: var(--font-display);
-      font-weight: 500;
-      letter-spacing: -0.025em;
-      line-height: 1.05;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      line-height: 1.12;
       margin: 0;
       color: var(--ink);
     }
 
-    .display-1 { font-size: clamp(44px, 7.2vw, 96px); font-weight: 400; }
-    .display-2 { font-size: clamp(36px, 5vw, 64px); font-weight: 400; }
-    .display-3 { font-size: clamp(28px, 3.4vw, 44px); font-weight: 500; }
+    .display-1 { font-size: clamp(38px, 6vw, 72px); font-weight: 600; }
+    .display-2 { font-size: clamp(30px, 4vw, 50px); font-weight: 600; }
+    .display-3 { font-size: clamp(24px, 3vw, 36px); font-weight: 600; }
 
     .italic { font-style: italic; font-weight: 400; }
     .ink-orange { color: var(--primary); }
@@ -117,9 +117,9 @@
     .eyebrow.no-line::before { display: none; }
 
     .lead {
-      font-size: clamp(17px, 1.4vw, 20px);
+      font-size: clamp(16px, 1.25vw, 18px);
       color: var(--muted);
-      line-height: 1.55;
+      line-height: 1.6;
       max-width: 62ch;
     }
 
@@ -182,8 +182,8 @@
       align-items: center;
       gap: 10px;
       font-family: var(--font-display);
-      font-weight: 800;
-      font-size: 22px;
+      font-weight: 700;
+      font-size: 20px;
       letter-spacing: -0.02em;
       text-decoration: none;
       color: var(--ink);
@@ -202,7 +202,7 @@
     .nav-links {
       display: flex;
       gap: 36px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--ink-2);
     }
@@ -349,8 +349,8 @@
       width: max-content;
       animation: marquee 38s linear infinite;
       font-family: var(--font-display);
-      font-size: 28px;
-      font-weight: 400;
+      font-size: 23px;
+      font-weight: 600;
       letter-spacing: -0.02em;
     }
     .strip-track span { display: inline-flex; align-items: center; gap: 56px; }
@@ -382,8 +382,8 @@
     .stat:last-child { border-right: none; }
     .stat-value {
       font-family: var(--font-display);
-      font-size: clamp(40px, 5vw, 64px);
-      font-weight: 500;
+      font-size: clamp(34px, 4vw, 52px);
+      font-weight: 600;
       line-height: 1;
       letter-spacing: -0.03em;
     }
@@ -473,7 +473,7 @@
     .cat-tag.ileri { background: var(--pink-soft); color: var(--pink); }
     .cat h3 {
       margin-top: 20px;
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 600;
       letter-spacing: -0.02em;
     }
@@ -512,14 +512,14 @@
     }
     .feature.reverse .feature-visual { order: 2; }
     .feature-text h3 {
-      font-size: clamp(30px, 3.4vw, 44px);
+      font-size: clamp(26px, 3vw, 36px);
       font-weight: 600;
       margin-top: 16px;
     }
     .feature-text p {
       margin-top: 20px;
       color: var(--muted);
-      font-size: 17px;
+      font-size: 16px;
       line-height: 1.65;
     }
     .feature-list {
@@ -736,11 +736,6 @@
   <header class="nav" id="nav">
     <div class="container nav-inner">
       <a href="#" class="logo">
-        <span class="logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12l4 4L19 6"/>
-          </svg>
-        </span>
         YÖKDİL<span style="color:var(--primary);"> Gramer</span>
       </a>
       <nav class="nav-links">
@@ -778,20 +773,11 @@
           </div>
           <div class="hero-meta reveal delay-4">
             <span class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span>
-            Türkçe anlatım · Açıklamalı quizler · PDF dışa aktarma · Günlük YÖKDİL odağı
+            Türkçe anlatım · Açıklamalı quizler · PDF dışa aktarma
           </div>
         </div>
 
         <div class="phone-stage reveal delay-2">
-          <div class="float-card fc-1">
-            <div class="fc-icon orange">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
-            </div>
-            <div class="fc-text">
-              <small>Bugünün Odağı</small>
-              <strong>YÖKDİL taktiği</strong>
-            </div>
-          </div>
           <div class="phone">
             <div class="phone-screen">
               <img src="images/categories.png" alt="YÖKDİL Gramer Kategorileri" onerror="this.src='https://placehold.co/300x650/FEF3E8/F97316?text=YOKDIL+Gramer'"/>
@@ -867,7 +853,7 @@
       <div class="section-head">
         <span class="eyebrow">Uygulama Özellikleri</span>
         <h2 class="display-2">YÖKDİL gramer çalışmasını <span class="italic ink-orange">daha düzenli</span> hale getirir.</h2>
-        <p class="lead">Konu anlatımı, akademik örnekler, açıklamalı quizler, PDF dışa aktarma ve günlük çalışma odaklarıyla her konuyu daha sistemli çalışabilirsiniz.</p>
+        <p class="lead">Konu anlatımı, akademik örnekler, açıklamalı quizler ve PDF dışa aktarma ile her konuyu daha sistemli çalışabilirsiniz.</p>
       </div>
 
       <div class="feature">
@@ -918,21 +904,6 @@
         </div>
       </div>
 
-      <div class="feature reverse">
-        <div class="feature-text">
-          <span class="eyebrow">04</span>
-          <h3>Günlük YÖKDİL odağı ve bildirimler</h3>
-          <p>Uygulama her gün farklı bir gramer veya sınav taktiğini öne çıkararak çalışmanızı daha hedefli hale getirir. Bildirimlerle çalışma hatırlatmaları alabilirsiniz.</p>
-          <ul class="feature-list">
-            <li><span class="check">✓</span> Günlük gramer odağı</li>
-            <li><span class="check">✓</span> Bağlaç, clause ve passive taktikleri</li>
-            <li><span class="check">✓</span> FCM destekli çalışma hatırlatmaları</li>
-          </ul>
-        </div>
-        <div class="feature-visual">
-          <div class="phone-sm"><div class="phone-screen"><img src="images/daily-focus.png" alt="Günün YÖKDİL odağı" onerror="this.src='https://placehold.co/260x550/FEF3E8/F97316?text=Gunluk+Odak'"/></div></div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -975,9 +946,9 @@
         <h2 class="display-2">YÖKDİL adayları <span class="italic ink-orange">ne diyor?</span></h2>
       </div>
       <div class="testimonial-grid">
-        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"Relative clause ve bağlaç sorularında neye bakmam gerektiğini daha net anladım. Açıklamalar kısa ama sınav için işe yarar."</div><div class="t-author">YÖKDİL Adayı</div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"Konu anlatımından sonra PDF çıktısı alabilmek güzel. Özellikle sınav öncesi tekrar için kullanışlı."</div><div class="t-author">Yüksek Lisans Adayı</div></div>
-        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"Açıklamalı quizler sayesinde sadece cevabı değil, neden o cevabın doğru olduğunu da görebiliyorum."</div><div class="t-author">Akademik İngilizce Öğrencisi</div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"Relative clause ve bağlaç sorularında neye bakmam gerektiğini daha net anladım. Açıklamalar kısa ama sınav için işe yarar."</div><div class="t-author">Elif Demir</div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"Konu anlatımından sonra PDF çıktısı alabilmek güzel. Özellikle sınav öncesi tekrar için kullanışlı."</div><div class="t-author">Mert Kaya</div></div>
+        <div class="t-card"><div class="t-stars">★★★★★</div><div class="t-text">"Açıklamalı quizler sayesinde sadece cevabı değil, neden o cevabın doğru olduğunu da görebiliyorum."</div><div class="t-author">Zeynep Aydın</div></div>
       </div>
     </div>
   </section>
