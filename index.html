@@ -412,96 +412,6 @@
     .section-head h2 { margin-top: 24px; }
     .section-head .lead { margin-top: 24px; }
 
-    .cats {
-      background: var(--surface);
-      border-top: 1px solid var(--hairline);
-      border-bottom: 1px solid var(--hairline);
-    }
-    .cat-filter {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 32px;
-      justify-content: center;
-    }
-    .cat-filter-btn {
-      padding: 8px 20px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 800;
-      cursor: pointer;
-      border: 1px solid var(--hairline);
-      background: transparent;
-      color: var(--ink-2);
-      transition: all 0.2s;
-      font-family: var(--font-body);
-    }
-    .cat-filter-btn.active,
-    .cat-filter-btn:hover {
-      background: var(--primary);
-      border-color: var(--primary);
-      color: white;
-    }
-    .cat-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .cat {
-      background: var(--surface-soft);
-      border: 1px solid var(--hairline);
-      border-radius: var(--radius-lg);
-      padding: 32px 28px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .cat:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 30px 60px -30px rgba(28,28,30,0.18);
-    }
-    .cat-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 11px;
-      font-weight: 900;
-      padding: 6px 12px;
-      border-radius: 999px;
-      letter-spacing: 0.04em;
-    }
-    .cat-tag.temel { background: var(--accent-soft); color: var(--primary-dark); }
-    .cat-tag.orta { background: var(--blue-soft); color: var(--blue); }
-    .cat-tag.ileri { background: var(--pink-soft); color: var(--pink); }
-    .cat h3 {
-      margin-top: 20px;
-      font-size: 24px;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
-    .cat p {
-      margin-top: 12px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.55;
-    }
-    .cat-stats {
-      margin-top: 24px;
-      padding-top: 18px;
-      border-top: 1px dashed var(--hairline);
-      font-size: 13px;
-      color: var(--muted-2);
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-    }
-    .cat-stats span:last-child { color: var(--primary-dark); font-weight: 800; }
-
-    @media (max-width: 880px) {
-      .cat-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 640px) {
-      .cat-grid { grid-template-columns: 1fr; }
-    }
-
     .feature {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -739,9 +649,9 @@
         YÖKDİL<span style="color:var(--primary);"> Gramer</span>
       </a>
       <nav class="nav-links">
-        <a href="#kategoriler">YÖKDİL Konuları</a>
         <a href="#ozellikler">Özellikler</a>
         <a href="#vitrin">Ekranlar</a>
+        <a href="#yorumlar">Yorumlar</a>
         <a href="#indir">İndir</a>
       </nav>
       <div class="hero-actions" style="margin:0;">
@@ -780,7 +690,7 @@
         <div class="phone-stage reveal delay-2">
           <div class="phone">
             <div class="phone-screen">
-              <img src="images/categories.png" alt="YÖKDİL Gramer Kategorileri" onerror="this.src='https://placehold.co/300x650/FEF3E8/F97316?text=YOKDIL+Gramer'"/>
+              <img src="images/screen1.png" alt="YÖKDİL Gramer Kategorileri" onerror="this.src='https://placehold.co/300x650/FEF3E8/F97316?text=YOKDIL+Gramer'"/>
             </div>
           </div>
           <div class="float-card fc-2">
@@ -799,8 +709,8 @@
 
   <div class="strip" aria-hidden="true">
     <div class="strip-track">
-      <span>YÖKDİL Gramer<span class="sep"></span>Akademik Örnekler<span class="sep"></span>Açıklamalı Quizler<span class="sep"></span><em>PDF Dışa Aktarma</em><span class="sep"></span>Relative Clauses<span class="sep"></span><em>Bağlaç Taktikleri</em><span class="sep"></span></span>
-      <span>YÖKDİL Gramer<span class="sep"></span>Akademik Örnekler<span class="sep"></span>Açıklamalı Quizler<span class="sep"></span><em>PDF Dışa Aktarma</em><span class="sep"></span>Relative Clauses<span class="sep"></span><em>Bağlaç Taktikleri</em><span class="sep"></span></span>
+      <span>YÖKDİL Gramer<span class="sep"></span>Akademik Örnekler<span class="sep"></span>Açıklamalı Quizler<span class="sep"></span><em>PDF Dışa Aktarma</em></span>
+      <span>YÖKDİL Gramer<span class="sep"></span>Akademik Örnekler<span class="sep"></span>Açıklamalı Quizler<span class="sep"></span><em>PDF Dışa Aktarma</em></span>
     </div>
   </div>
 
@@ -811,39 +721,6 @@
         <div class="stat"><div class="stat-value">68</div><div class="stat-label">Akademik Konu Anlatımı</div></div>
         <div class="stat"><div class="stat-value">590<sup>+</sup></div><div class="stat-label">Örnek Cümle ve Çeviri</div></div>
         <div class="stat"><div class="stat-value">PDF</div><div class="stat-label">Konu Notlarını Dışa Aktarma</div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cats" id="kategoriler">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">YÖKDİL Konuları</span>
-        <h2 class="display-2">YÖKDİL’de işinize yarayan gramer konuları <span class="italic ink-orange">tek yerde.</span></h2>
-        <p class="lead">Akademik metinlerde sık görülen cümle yapıları, bağlaçlar, clause türleri ve sınavda karşınıza çıkabilecek gramer ilişkileri Türkçe anlatımla sunulur.</p>
-      </div>
-
-      <div class="cat-filter">
-        <button class="cat-filter-btn active" data-filter="all">Tümü</button>
-        <button class="cat-filter-btn" data-filter="temel">Temel</button>
-        <button class="cat-filter-btn" data-filter="orta">Akademik</button>
-        <button class="cat-filter-btn" data-filter="ileri">YÖKDİL</button>
-      </div>
-
-      <div class="cat-grid" id="catGrid">
-        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel</span><h3>Tenses</h3><p>Akademik metinlerde zaman uyumu, olay sırası ve anlam ilişkisini doğru yorumlama.</p><div class="cat-stats"><span>Zaman Uyumu</span><span>Tenses</span></div></div>
-        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel</span><h3>Articles</h3><p>A, an, the ve article kullanılmayan akademik ifadelerde doğru kullanım mantığı.</p><div class="cat-stats"><span>İsim Kullanımı</span><span>Articles</span></div></div>
-        <div class="cat" data-level="orta"><span class="cat-tag orta">Akademik</span><h3>Prepositions</h3><p>Academic English içinde sık geçen in, on, at, by, for, of ve with kullanımları.</p><div class="cat-stats"><span>Kalıp İfadeler</span><span>Edat</span></div></div>
-        <div class="cat" data-level="ileri"><span class="cat-tag ileri">YÖKDİL</span><h3>Conjunctions</h3><p>Zıtlık, neden-sonuç, amaç ve koşul ilişkilerini kuran sınav bağlaçları.</p><div class="cat-stats"><span>Anlam İlişkisi</span><span>Bağlaç</span></div></div>
-        <div class="cat" data-level="orta"><span class="cat-tag orta">Akademik</span><h3>Modal Verbs</h3><p>Olasılık, zorunluluk, çıkarım ve tavsiye anlamlarını akademik cümlelerde ayırt etme.</p><div class="cat-stats"><span>Meaning</span><span>Modal</span></div></div>
-        <div class="cat" data-level="orta"><span class="cat-tag orta">Akademik</span><h3>Comparatives</h3><p>Akademik karşılaştırma cümlelerinde more, less, as...as ve than yapılarını anlama.</p><div class="cat-stats"><span>Karşılaştırma</span><span>Compare</span></div></div>
-        <div class="cat" data-level="temel"><span class="cat-tag temel">Temel</span><h3>Quantifiers</h3><p>Much, many, several, a number of ve amount of gibi miktar ifadelerini doğru seçme.</p><div class="cat-stats"><span>Miktar</span><span>Quantifier</span></div></div>
-        <div class="cat" data-level="orta"><span class="cat-tag orta">Akademik</span><h3>Passive Voice</h3><p>Bilimsel metinlerde sık geçen edilgen yapılar ve akademik anlatım kalıpları.</p><div class="cat-stats"><span>Be + V3</span><span>Passive</span></div></div>
-        <div class="cat" data-level="ileri"><span class="cat-tag ileri">YÖKDİL</span><h3>Conditionals</h3><p>If, unless, provided that ve as long as gibi koşul yapılarının sınav kullanımı.</p><div class="cat-stats"><span>Koşul</span><span>If Clause</span></div></div>
-        <div class="cat" data-level="ileri"><span class="cat-tag ileri">YÖKDİL</span><h3>Relative Clauses</h3><p>Akademik metinlerde isimleri açıklayan who, which, that, where ve whose yapıları.</p><div class="cat-stats"><span>Yapı Analizi</span><span>Clause</span></div></div>
-        <div class="cat" data-level="ileri"><span class="cat-tag ileri">YÖKDİL</span><h3>Noun Clauses</h3><p>That, whether, if ve wh- clause yapılarıyla akademik görüş ve bulgu aktarma.</p><div class="cat-stats"><span>Soru Sırası</span><span>Clause</span></div></div>
-        <div class="cat" data-level="orta"><span class="cat-tag orta">Akademik</span><h3>Reported Speech</h3><p>Research suggests that, experts argue that gibi aktarma yapılarında zaman ve anlam uyumu.</p><div class="cat-stats"><span>Aktarım</span><span>Report</span></div></div>
-        <div class="cat" data-level="ileri"><span class="cat-tag ileri">YÖKDİL</span><h3>Gerund & Infinitive</h3><p>Fiil sonrası V-ing veya to V seçimini akademik kullanım ve sınav mantığıyla öğrenme.</p><div class="cat-stats"><span>Verb Pattern</span><span>V-ing / to V</span></div></div>
       </div>
     </div>
   </section>
@@ -860,7 +737,7 @@
         <div class="feature-text">
           <span class="eyebrow">01</span>
           <h3>YÖKDİL odaklı konu anlatımı</h3>
-          <p>Konular genel İngilizce mantığıyla değil, YÖKDİL’de karşınıza çıkan akademik cümle yapıları dikkate alınarak hazırlanır.</p>
+          <p>Konular genel İngilizce mantığıyla değil, YÖKDİL'de karşınıza çıkan akademik cümle yapıları dikkate alınarak hazırlanır.</p>
           <ul class="feature-list">
             <li><span class="check">✓</span> Türkçe açıklamalı gramer anlatımı</li>
             <li><span class="check">✓</span> Akademik örnek cümleler</li>
@@ -916,23 +793,23 @@
       </div>
       <div class="showcase-row">
         <div class="showcase-card">
-          <div class="phone-screen"><img src="images/categories.png" alt="YÖKDİL kategorileri" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Kategoriler'"/></div>
+          <div class="phone-screen"><img src="images/screen1.png" alt="YÖKDİL kategorileri" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Kategoriler'"/></div>
           <div class="showcase-tag"><small>01</small><strong>YÖKDİL Kategorileri</strong></div>
         </div>
         <div class="showcase-card">
-          <div class="phone-screen"><img src="images/lesson-list.png" alt="Konu listesi" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Konu+Listesi'"/></div>
+          <div class="phone-screen"><img src="images/screen2.png" alt="Konu listesi" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Konu+Listesi'"/></div>
           <div class="showcase-tag"><small>02</small><strong>Konu Listesi</strong></div>
         </div>
         <div class="showcase-card">
-          <div class="phone-screen"><img src="images/lesson-detail.png" alt="Akademik anlatım" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Anlatim'"/></div>
+          <div class="phone-screen"><img src="images/screen3.png" alt="Akademik anlatım" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Anlatim'"/></div>
           <div class="showcase-tag"><small>03</small><strong>Akademik Anlatım</strong></div>
         </div>
         <div class="showcase-card">
-          <div class="phone-screen"><img src="images/quiz.png" alt="Mini quiz" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Quiz'"/></div>
+          <div class="phone-screen"><img src="images/screen4.png" alt="Mini quiz" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=Quiz'"/></div>
           <div class="showcase-tag"><small>04</small><strong>Mini Quiz</strong></div>
         </div>
         <div class="showcase-card">
-          <div class="phone-screen"><img src="images/pdf-export.png" alt="PDF dışa aktarma" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=PDF'"/></div>
+          <div class="phone-screen"><img src="images/screen5.png" alt="PDF dışa aktarma" onerror="this.src='https://placehold.co/200x430/FEF3E8/F97316?text=PDF'"/></div>
           <div class="showcase-tag"><small>05</small><strong>PDF Dışa Aktarma</strong></div>
         </div>
       </div>
@@ -974,7 +851,7 @@
           <a href="#" class="logo" style="font-size: 20px;">YÖKDİL<span style="color:var(--primary);"> Gramer</span></a>
           <p>YÖKDİL Gramer; akademik İngilizce gramer konularını Türkçe anlatım, örnek cümleler, açıklamalı quizler ve PDF dışa aktarma özelliğiyle çalışmanıza yardımcı olur.</p>
         </div>
-        <div><h5>Keşfet</h5><ul><li><a href="#kategoriler">YÖKDİL Konuları</a></li><li><a href="#ozellikler">Özellikler</a></li><li><a href="#vitrin">Ekranlar</a></li><li><a href="#yorumlar">Yorumlar</a></li></ul></div>
+        <div><h5>Keşfet</h5><ul><li><a href="#ozellikler">Özellikler</a></li><li><a href="#vitrin">Ekranlar</a></li><li><a href="#yorumlar">Yorumlar</a></li><li><a href="#indir">İndir</a></li></ul></div>
         <div><h5>İndir</h5><ul><li><a href="https://play.google.com/store/apps/details?id=com.spinel.learnova" target="_blank">Google Play</a></li></ul></div>
         <div><h5>Yasal</h5><ul><li><a href="#">Kullanım Şartları</a></li><li><a href="privacy.html">Gizlilik Politikası</a></li></ul></div>
       </div>
@@ -1004,23 +881,6 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    const filterButtons = document.querySelectorAll('.cat-filter-btn');
-    const categoryCards = document.querySelectorAll('.cat');
-
-    filterButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        filterButtons.forEach((btn) => btn.classList.remove('active'));
-        button.classList.add('active');
-
-        const filter = button.dataset.filter;
-
-        categoryCards.forEach((card) => {
-          const visible = filter === 'all' || card.dataset.level === filter;
-          card.style.display = visible ? 'block' : 'none';
-        });
-      });
-    });
   </script>
 </body>
 </html>
